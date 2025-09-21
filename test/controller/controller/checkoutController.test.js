@@ -2,7 +2,7 @@ const request = require('supertest');
 const sinon = require('sinon');
 const { expect } = require('chai');
 
-const app = require('../../rest/app')
+const app = require('../../../rest/app')
 
 
 

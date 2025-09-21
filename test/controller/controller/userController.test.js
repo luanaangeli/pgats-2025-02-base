@@ -2,10 +2,10 @@ const request = require('supertest');
 const sinon = require('sinon');
 const { expect } = require('chai');
 
-const app = require('../../rest/app')
+const app = require('../../../rest/app')
 
 //Mock
-const userService = require('../../src/services/userService')
+const userService = require('../../../src/services/userService')
 
 //testes
 describe('User Controller', () => {
@@ -99,7 +99,7 @@ describe('User Controller', () => {
 
         });
 
-        it('COM MOCK 200 AUTENTICAR SUCESSO: Quando informo email errado, o retorno será 401', async () => {
+        it('COM MOCK 200 AUTENTICAR SUCESSO: Quando informo email correto, o retorno será 200', async () => {
             
             const userServiceMock = sinon.stub(userService, 'authenticate');
             userServiceMock.returns(true);
@@ -117,8 +117,6 @@ describe('User Controller', () => {
 
         });
 
-
-
         it('Quando informo senha errado, o retorno será 401', async () => {
             const resposta = await request(app)
                 .post('/api/users/login')
@@ -132,7 +130,7 @@ describe('User Controller', () => {
 
         });
 
-        it('Quando informo email correto para cadastrar, o retorno será 201', async () => {
+        it('Quando informo email correto para cadastrar, o retorno será 200', async () => {
             const resposta = await request(app)
                 .post('/api/users/login')
                 .send({
