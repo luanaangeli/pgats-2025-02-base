@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/**/*.test.js --timeout 10000", 
-    "test-external": "mocha test/controller/external/**/*.test.js --timeout 10000"  
+    "test-controller": "mocha test/controller/controller/**/*.test.js --timeout 10000",
+    "test-external": "mocha test/controller/external/**/*.test.js --timeout 10000",
+    "start": "node server.js"  
   },
   "repository": {
     "type": "git",
