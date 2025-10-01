@@ -17,12 +17,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: '20.x'
       
       - name: Install dependencies
         run: npm install
       
-      - name: Rodar o tests 
+      - name: Rodar o tests controller com e sem mocks
         run: npm run test-controller
 
       - name: Subir a API
