@@ -2,10 +2,10 @@ const request = require('supertest');
 const sinon = require('sinon');
 const { expect } = require('chai');
 
-const app = require('../../../rest/app')
+const app = require('../../rest/app')
 
 //Mock
-const userService = require('../../../src/services/userService')
+const userService = require('../../src/services/userService')
 
 //testes
 describe('User Controller', () => {

@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*.test.js --timeout 10000", 
-    "test-controller": "mocha test/controller/controller/**/*.test.js --timeout 10000",
-    "test-external": "mocha test/controller/external/**/*.test.js --timeout 10000",
+    "test-controller": "mocha test_/controller/*.test.js --timeout 10000",
+    "test-external": "mocha test_/external/*.test.js --timeout 10000",
+    "test": "mocha test_/**/*.test.js --timeout 10000",
     "start": "node server.js"  
   },
   "repository": {

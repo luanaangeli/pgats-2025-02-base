@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repositorio
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -22,16 +22,16 @@ jobs:
       - name: Install dependencies
         run: npm install
       
-      - name: Run tests
-        run: npm run test
-      
+      - name: Rodar o tests 
+        run: npm run test-controller
+
       - name: Subir a API
         run: npm start &
 
-      - name: Esperar a API estar Funcinando
+      - name: Esperar a API estar Funcionando
         run: sleep 5
 
-      - name: Rodar os testes de API
+      - name: Rodar os testes de API via HTTP
         run: npm run test-external
 
 
